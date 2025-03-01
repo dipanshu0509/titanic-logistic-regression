@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-# Load the trained model
+# Load the trained logistic regression model
 model = joblib.load('logistic_model.pkl')
 
 # Title of the app
@@ -33,9 +33,9 @@ input_data = pd.DataFrame({
     'SibSp': [sibsp],
     'Parch': [parch],
     'Fare': [fare],
-    'male': [sex_male],        # Match feature name from training
-    'Q': [embarked_Q],         # Match feature name from training
-    'S': [embarked_S]          # Match feature name from training
+    'male': [sex_male],
+    'Q': [embarked_Q],
+    'S': [embarked_S]
 })
 
 # Make prediction when button is clicked
